@@ -1,14 +1,262 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Web agency Toulouse, Pam - Website ui design and strategy</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        'sans': ['"PP Neue Montreal"', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        @font-face {
+            font-display: swap;
+            font-family: 'PP Neue Montreal';
+            font-style: normal;
+            font-weight: 400;
+            src: url(fonts/PPNeueMontreal-Regular.woff2) format("woff2"), url(fonts/PPNeueMontreal-Regular.woff) format("woff")
+        }
+
+        html,
+        body {
+            min-height: 100vh;
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: 'PP Neue Montreal', sans-serif;
+            font-size: 24px;
+            -webkit-font-smoothing: antialiased;
+            background-color: #fff;
+        }
+
+        @media (min-width: 1000px) {
+            body {
+                font-size: 30px;
+            }
+        }
+
+        @media (min-width: 1400px) {
+            body {
+                font-size: 34px;
+            }
+        }
+
+        .wrapper {
+            margin-inline: auto;
+            padding-inline: 20px;
+        }
+
+        body.home header {
+            position: sticky;
+            top: 0;
+            z-index: 10;
+            background-color: #FFF;
+        }
+
+        @media (min-width: 1024px) {
+
+            body.home .monoFooter,
+            body.info .monoFooter,
+            body.offre .monoFooter {
+                display: none;
+            }
+        }
+
+
+
+        /* Pure CSS background color changes based on time (every 3 seconds) */
+        .specialBg {
+            background-color: white;
+            animation: bg-color-change 15s infinite steps(1);
+            /* Using steps(1) for immediate changes between colors */
+        }
+
+        @keyframes bg-color-change {
+            0% {
+                background-color: white;
+            }
+
+            20% {
+                /* 3 seconds (20% of 15s) */
+                background-color: #ffccd5;
+                /* Pink */
+            }
+
+            40% {
+                /* 6 seconds (40% of 15s) */
+                background-color: #7dc98f;
+                /* Green */
+            }
+
+            60% {
+                /* 9 seconds (60% of 15s) */
+                background-color: #ffccd5;
+                /* Light Pink again */
+            }
+
+            80% {
+                /* 12 seconds (80% of 15s) */
+                background-color: #ffeb99;
+                /* Orangish */
+            }        }
+
+        /* Base styling */
+        html {
+            height: 100%;
+            overflow-y: auto;
+            overflow-x: hidden;
+        }
+    </style>
+
 </head>
-<body>
-    <div class="bg-red-500">    
-        Hello 
+
+<body class="home">
+    <div>
+        <div class="specialBg transition-[background] duration-500">
+            <nav id="header"
+                class="bg-white duration-500 transition-[background] wrapper sticky top-0 z-[400] pt-4 pb-4 gap-x-0 sm:gap-x-2 grid grid-cols-[auto_80px_110px] lg:grid-cols-[calc(25%-10px)_calc(7%-10px)_calc(18%-5px)_calc(50%-5px)]">
+                <a>Pam</a>
+                <a class="text-right md:text-left">
+                    Info
+                </a>
+                <a class="text-right md:text-left">
+                    Work (44)
+                </a>
+                <a class="text-right md:text-left text-gray-500">
+                    Brand & Ecommerce Agency
+                </a>
+
+            </nav>
+            <main>
+                <main><!----><!--[--><!----><!----><!----><!----><!----><!----><!----><!--]-->
+                    <section class="wrapper lg:pl-[calc(50%+5px)] lg:pr-[12%]">
+                        <p>We design high-performance  Lorem ipsum dolor sit, amet consectetur adipisicing elit. Accusantium, quasi.</p>
+                    </section>
+
+                    <section
+                        class="wrapper relative mt-[30px] lg:mt-[60px] items-start md:grid lg:grid-cols-[calc(25%-10px)_50%_calc(25%-10px)] gap-[10px]">
+                        <div class="lg:sticky flex lg:block justify-between top-[85px]">
+                            <h2>Selected<br class="hidden md:block"> works</h2>
+                        </div>
+                        <div><a class="grid gap-[20px] lg:gap-0" data-color="#ccc"><span
+                                    class="order-2 lg:order-none lg:mt-[20px] lg:ml-[calc(50%+5px)]">Fratelli
+                                    Rossi</span>
+                                <div class="group relative mt-6 overflow-hidden rounded"><img src="images/image1.avif"
+                                        width="720" height="470" alt="eshop mode" data-nuxt-img=""
+                                        class="w-full block duration-1000 scale-[1.05]">
+
+                                    <div
+                                        class="max-lg:hidden pointer-events-none translate-y-[-50%] bg-white/40 z-50 rounded w-[60%] left-[20%] top-[50%] duration-300 absolute h-auto aspect-video backdrop-blur-xl">
+
+                                    </div>
+                                </div>
+                            </a><a class="grid gap-[20px] lg:gap-0" data-color="#58886C"><span
+                                    class="order-2 lg:order-none lg:mt-[20px] lg:ml-[calc(50%+5px)]">GoodModa Lorem</span>
+                                <div class="group relative mt-6 overflow-hidden rounded"><img src="images/image2.avif"
+                                        width="720" height="470" alt="eshop meuble design" data-nuxt-img=""
+                                        class="w-full block duration-1000 w-full scale-[1.05]">
+                                    <div
+                                        class="max-lg:hidden pointer-events-none translate-y-[-50%] bg-white/40 z-50 rounded w-[60%] left-[20%] top-[50%] duration-300 absolute h-auto aspect-video backdrop-blur-xl">
+
+                                    </div>
+                                </div>
+                            </a><a class="grid gap-[20px] lg:gap-0" data-color="#ecbec3"><span
+                                    class="order-2 lg:order-none lg:mt-[20px] lg:ml-[calc(50%+5px)]">Lucas du lorem</span>
+                                <div class="group relative mt-6 overflow-hidden rounded"><img src="images/image4.avif"
+                                        width="720" height="470" alt="eshop mode" data-nuxt-img=""
+                                        class="w-full block duration-1000 scale-[1.05]">
+                                    <div
+                                        class="max-lg:hidden pointer-events-none translate-y-[-50%] bg-white/40 z-50 rounded w-[60%] left-[20%] top-[50%] duration-300 absolute h-auto aspect-video backdrop-blur-xl">
+
+                                    </div>
+                                </div>
+                            </a><a class="grid gap-[20px] lg:gap-0" data-color="#7C7763"><span
+                                    class="order-2 lg:order-none lg:mt-[20px] lg:ml-[calc(50%+5px)]">Ipsdfkm </span>
+                                <div class="group relative mt-6 overflow-hidden rounded">
+                                    <img src="images/image3.avif" width="720" height="470" alt="publicite site"
+                                        data-nuxt-img="" class="w-full block duration-1000 scale-[1.05]">
+                                    <div
+                                        class="max-lg:hidden pointer-events-none translate-y-[-50%] bg-white/40 z-50 rounded w-[60%] left-[20%] top-[50%] duration-300 absolute h-auto aspect-video backdrop-blur-xl">
+
+                                    </div>
+                                </div>
+                            </a><a class="grid gap-[20px] lg:gap-0" data-color="#FFB84F"><span
+                                    class="order-2 lg:order-none lg:mt-[20px] lg:ml-[calc(50%+5px)]">Quredil</span>
+                                <div class="group relative mt-6 overflow-hidden rounded"><img src="images/image5.avif"
+                                        width="720" height="470" alt="podcast site" data-nuxt-img=""
+                                        class="w-full block duration-1000 scale-[1.05]">
+                                    <div
+                                        class="max-lg:hidden pointer-events-none translate-y-[-50%] bg-white/40 z-50 rounded w-[60%] left-[20%] top-[50%] duration-300 absolute h-auto aspect-video backdrop-blur-xl">
+
+                                    </div>
+                                </div>
+                            </a><a class="grid gap-[20px] lg:gap-0" data-color="#CA6A17"><span
+                                    class="order-2 lg:order-none lg:mt-[20px] lg:ml-[calc(50%+5px)]">March & Bigquery</span>
+                                <div class="group relative mt-6 overflow-hidden rounded">
+                                    <img src="images/image6.avif" width="720" height="470" alt="eshop artiste"
+                                        data-nuxt-img="" class="w-full block duration-1000 scale-[1.05]">
+                                    <div
+                                        class="max-lg:hidden pointer-events-none translate-y-[-50%] bg-white/40 z-50 rounded w-[60%] left-[20%] top-[50%] duration-300 absolute h-auto aspect-video backdrop-blur-xl">
+
+                                    </div>
+                                </div>
+                            </a></div>
+                        <div class="lg:sticky mt-[40px] lg:mt-0 flex lg:block justify-between top-[90px] text-right">
+                            <div class="underline decoration-2 underline-offset-4"><a class="">View all works</a></div>
+                        </div>
+                    </section>
+                    <section class="w-full mt-[60px] lg:mt-[100px] h-[400px] sm:h-[100vh]"><a class=""><img
+                                src="images/image7.avif" width="2800" height="1500" alt="exemple site internet"
+                                data-nuxt-img="" class="w-full h-full object-cover"></a>
+                        <h1 class="hidden absolute top-[20px] left-0 right-0"><svg class="w-[279px] h-[119px] mx-auto"
+                                viewBox="0 0 279 119" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M0.884277 116.875H12.817V67.5096H45.8362C67.2497 67.5096 83.4324 58.1923 83.4324 33.6731C83.4324 9.15384 67.2497 0 45.8362 0H0.884277V116.875ZM12.817 57.0481V10.4615H46.9804C62.6727 10.4615 71.0093 17.8173 71.0093 33.6731C71.0093 49.6923 62.6727 57.0481 46.9804 57.0481H12.817Z"
+                                    fill="white"></path>
+                                <path
+                                    d="M111.774 119C125.505 119 135.312 113.769 141.197 104.288H141.524C142.014 114.75 146.264 117.529 153.13 117.529C155.091 117.529 156.889 117.202 158.687 116.875V109.192C157.706 109.356 157.216 109.356 156.399 109.356C152.803 109.356 151.822 106.25 151.822 99.5481V57.8654C151.822 37.9231 138.255 31.3846 122.889 31.3846C98.5334 31.3846 89.3796 43.9712 88.5622 58.6827H99.6776C100.495 46.4231 106.38 40.7019 122.399 40.7019C135.966 40.7019 141.36 46.4231 141.36 54.9231C141.36 64.8942 132.533 65.875 118.803 68.3269C97.2257 72.25 84.4757 77.8077 84.4757 95.7885C84.4757 109.683 95.2642 119 111.774 119ZM113.081 109.683C100.985 109.683 95.5911 104.452 95.5911 94.8077C95.5911 84.1827 103.928 80.0962 120.11 77.1538C130.081 75.5192 138.908 73.5577 141.36 70.125V85.6538C141.36 100.692 130.245 109.683 113.081 109.683Z"
+                                    fill="white"></path>
+                                <path
+                                    d="M167.403 116.875H178.028V64.2404C178.028 52.1442 186.692 40.8654 201.24 40.8654C215.134 40.8654 217.586 50.1827 217.586 60.6442V116.875H228.211V64.2404C228.211 52.1442 237.038 40.8654 251.586 40.8654C265.317 40.8654 267.932 50.1827 267.932 60.6442V116.875H278.557V58.3558C278.557 41.0288 269.894 31.5481 253.874 31.5481C240.797 31.5481 231.807 38.5769 226.413 46.9135H226.086C222.817 36.9423 215.297 31.5481 203.528 31.5481C190.451 31.5481 182.605 38.5769 178.355 45.2788H178.028V33.5096H167.403V116.875Z"
+                                    fill="white"></path>
+                            </svg></h1>
+                    </section>
+                    <section
+                        class="mt-[20px] lg:mb-[250px] wrapper grid md:grid-cols-[30%_40%_30%] lg:grid-cols-[32%_40%_28%]">
+                        <h2>Agency</h2>
+                        <div class="mt-[20px] md:-mt-0"> Together, Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestias, harum! sdaf asdfmskf. </div><a
+                            class="mt-[20px] md:-mt-0 block lg:text-right">Learn more</a>
+                    </section>
+                </main>
+                <footer id="footer"
+                    class="relative text-center lg:text-left wrapper grid pt-[50px] pb-[20px] lg:grid-cols-[32%_30%_38%]">
+                    <div><a>+12 34 567 89</a></div>
+                    <div class="group"><a class="block">info@cogni.com</a></div>
+                    <div class="lg:flex items-end">
+                        <p><a target="_blank">Lorem ipsum ui</a>
+                            <span
+                                class="hidden">31000</span>
+                                <span class="lg:hidden">, </span>
+                                <span>Toulouse</span></p>
+                    </div>
+                    <div class="lg:flex justify-end gap-3 items-end">
+                        <a target="_blank">Instagram</a>
+                        <a target="_blank">LinkedIn</a>
+                    </div>
+                </footer>
+            </main>
+        </div>
     </div>
 </body>
+
 </html>
